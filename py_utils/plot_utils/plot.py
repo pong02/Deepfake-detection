@@ -1,7 +1,7 @@
 """
 Proj: YZ_utils
 Date: 3/29/18
-Written by Yuezun Li
+Editted by Stuti K.
 --------------------------
 """
 import numpy as np
@@ -92,7 +92,7 @@ def draw_barchart(X, Y, order, xname, yname, params, xlim=None, ylim=None):
         plt.bar(offset + X[i], Y[i], barwidth, color=colors[i], label=type_name)
         offset += barwidth
     plt.grid()
-    plt.legend()
+    print('done') # plt.legend()
     fig.canvas.draw()
     # grab the pixel buffer and dump it into a numpy array
     im = np.array(fig.canvas.renderer._renderer)[:, :, :-1]
