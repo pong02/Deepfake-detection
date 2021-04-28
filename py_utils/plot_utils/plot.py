@@ -1,6 +1,6 @@
 """
-Proj: YZ_utils
-Date: 3/29/18
+Proj: DeepFake-Detection
+Date: 28/3/2021
 Editted by Stuti K.
 --------------------------
 """
@@ -92,7 +92,7 @@ def draw_barchart(X, Y, order, xname, yname, params, xlim=None, ylim=None):
         plt.bar(offset + X[i], Y[i], barwidth, color=colors[i], label=type_name)
         offset += barwidth
     plt.grid()
-    print('done') # plt.legend()
+    # plt.legend()
     fig.canvas.draw()
     # grab the pixel buffer and dump it into a numpy array
     im = np.array(fig.canvas.renderer._renderer)[:, :, :-1]
