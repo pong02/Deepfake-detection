@@ -48,7 +48,7 @@ def draw2D(X, Y, order, xname, yname, params, xlim=None, ylim=None, rcparams=Non
         plt.plot(X[i], Y[i], colors[i], label=type_name, linewidth=linewidth, markersize=markersize, marker=markers[i])
 
     plt.grid()
-    plt.legend(loc=legend_loc)
+    # plt.legend(loc=legend_loc)
     fig.canvas.draw()
     # grab the pixel buffer and dump it into a numpy array
     im = np.array(fig.canvas.renderer._renderer)[:, :, :-1]
