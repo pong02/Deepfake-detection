@@ -5,7 +5,7 @@
 import tensorflow as tf
 from easydict import EasyDict as edict
 
-import ops
+from deep_base import ops
 
 
 def get_vgg16_conv5(input, params):
