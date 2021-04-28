@@ -1,6 +1,6 @@
 """
-Proj: blink-detection
+Proj: deepfake-detection
 Date: 4/9/18
-Written by Yuezun Li
+Written by Stuti K.
 --------------------------
 """
