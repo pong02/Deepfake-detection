@@ -120,7 +120,7 @@ class Solu(object):
                                 yname='eye state',
                                 params=params,
                                 xlim=[0, max_X],
-                                ylim=[-1, 2])
+                                ylim=[0, 1])
 
         prob_plot_2 = plot.draw2D([x_axis[:i + 1]],
                                 [self.total_eye2_prob],
@@ -129,7 +129,7 @@ class Solu(object):
                                 yname='eye state',
                                 params=params,
                                 xlim=[0, max_X],
-                                ylim=[-1, 2])
+                                ylim=[0, 1])
 
         vis = np.concatenate([prob_plot_1, prob_plot_2], axis=1)
         scale = float(self.output_height) / vis.shape[0]
