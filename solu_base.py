@@ -5,6 +5,7 @@ Yuezun Li, Ming-ching Chang and Siwei Lyu
 """
 
 import numpy as np
+import pandas as pd
 import cv2, os
 import matplotlib
 import sys
@@ -137,3 +138,14 @@ class Solu(object):
         vis = cv2.resize(vis, None, None, fx=scale, fy=scale)
         self.plot_vis_list.append(vis)
         return self.plot_vis_list
+    
+    def exportDF(self,filename):
+        x = np.arange(self.frame_num) / self.fps
+        # preparing df to export
+        df = pd.DataFrame({
+            'frames': x,
+            'eye1Pre': self.total_eye1_prob,
+            'eye2Pre': self.total_eye2_prob
+        })
+        df.to_csv("/content/sample_data/"+filename+".csv", encoding='utf-8')
+        
