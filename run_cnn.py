@@ -40,7 +40,11 @@ def main(input_vid_path, out_dir):
 
         solution.push_eye_prob(eye1_prob[0, 1], eye2_prob[0, 1])
         solution.plot_by_fid(i)
-
+    
+    vidname = input_vid_path.split('/')[-1].split('.')[0]
+    filename = vidname + "-CNN"
+    solution.exportDF(filename)
+    
     sess.close()
     tf.reset_default_graph()
     solution.gen_videos(out_dir, 'cnn')
