@@ -68,7 +68,11 @@ def main(input_vid_path, out_dir):
 
             solution.push_eye_prob(eye1_prob, eye2_prob)
             solution.plot_by_fid(j)
-
+    
+    vidname = input_vid_path.split('/')[-1].split('.')[0]
+    filename = vidname + "-LRCN"
+    solution.exportDF(filename)
+    
     sess.close()
     solution.gen_videos(out_dir, 'lrcn')
 
